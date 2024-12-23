@@ -1,0 +1,18 @@
+:root {
+  /* Khai Báo Biến */
+  --primary-bg-color: #ff4500; /* Màu nền chính */
+  --secondary-bg-color: #f0f0f0; /* Màu nền phụ */
+  --highlight-bg-color: #FFD700; /* Màu nền nổi bật */
+  --footer-bg-color: #333333; /* Màu nền footer */
+  --header-bg-color: #0066cc; /* Màu nền header */
+  --white-bg-color: #ffffff; /* Màu nền trắng */
+  --dark-bg-color: #000000; /* Màu nền đen */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;  
+}
