@@ -108,3 +108,15 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
   padding: 0.85rem 1.5rem;
   border-color: rgba(24, 28, 33, 0.03) !important;
 }
+
+.logo {
+  position: absolute; /* Định vị tuyệt đối */
+  top: 0; /* Canh trên cùng */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Đưa logo về chính giữa */
+  z-index: 10; /* Đảm bảo logo nằm trên các phần tử khác */
+}
+
+.container {
+  margin-top: 20px; /* Phần tử bên dưới vẫn ở vị trí bình thường */
+}
