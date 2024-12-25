@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hồ Sơ Người Dùng</title>
+        <link rel="stylesheet" href="./user-dashboard.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <div class="container light-style flex-grow-1 container-p-y">
+            <h4 class="font-weight-bold py-3 mb-4">Thông Tin Người Dùng</h4>
+            <div class="card overflow-hidden">
+                <div class="row no-gutters row-bordered row-border-light">
+                    <!-- ? sidebar -->
+                    <div class="col-md-3 pt-0">
+                        <div
+                            class="list-group list-group-flush account-settings-links"
+                        >
+                            <a
+                                class="list-group-item list-group-item-action active"
+                                data-toggle="list"
+                                href="#account-general"
+                                >Chung</a
+                            >
+                            <a
+                                class="list-group-item list-group-item-action"
+                                data-toggle="list"
+                                href="#account-change-password"
+                                >Đổi Mật Khẩu</a
+                            >
+                            <a
+                                class="list-group-item list-group-item-action"
+                                data-toggle="list"
+                                href="#account-info"
+                                >Cập Nhật Thông Tin</a
+                            >
+                            <a
+                                class="list-group-item list-group-item-action"
+                                data-toggle="list"
+                                href="#faceid-authentication"
+                                >Xác Thực FACEID</a
+                            >
+                            <a
+                                class="list-group-item list-group-item-action"
+                                data-toggle="list"
+                                href="#see-exam-schedule"
+                                >Xem Lịch Trình Thi</a
+                            >
+                            <a
+                                class="list-group-item list-group-item-action"
+                                data-toggle="list"
+                                href="#cancel-exam"
+                                >Huỷ Thi</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div
+                                class="tab-pane fade active show"
+                                id="account-general"
+                            >
+                                <div class="card-body media align-items-center">
+                                    <img
+                                        src="/assets/image/user-avatar-male-5.png"
+                                        alt
+                                        class="d-block ui-w-80"
+                                    />
+                                    <div class="media-body ml-4">
+                                        <label class="btn btn-outline-primary">
+                                            Cập Nhật Hình Ảnh
+                                            <input
+                                                type="file"
+                                                class="account-settings-fileinput"
+                                            />
+                                        </label>
+                                        &nbsp;
+                                        <button
+                                            type="button"
+                                            class="btn btn-default md-btn-flat"
+                                        >
+                                            Reset
+                                        </button>
+                                        <div class="text-light small mt-1">
+                                            Allowed JPG, GIF or PNG. Max size of
+                                            800K
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="border-light m-0" />
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Username</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control mb-1"
+                                            value="null"
+                                        />
+                                        <!-- ! value là tên người dùng -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Name</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value="null"
+                                        />
+                                        <!-- ! value là tên người dùng -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">E-mail</label>
+                                        <input
+                                            type="text"
+                                            class="form-control mb-1"
+                                            value="null@gmail.com"
+                                        />
+                                        <!-- ! value là tên người dùng -->
+                                        <div class="alert alert-warning mt-3">
+                                            Email của bạn chưa được xác nhận,
+                                            hãy kiểm tra Hộp Thư.<br />
+                                            <a href="javascript:void(0)"
+                                                >Resend confirmation</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-pane fade"
+                                id="account-change-password"
+                            >
+                                <div class="card-body pb-2">
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Mật Khẩu Hiện Tại</label
+                                        >
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Mật Khẩu Mới</label
+                                        >
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Nhập Lại Mật Khẩu Mới</label
+                                        >
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <!-- ! Khi Save Changes sẽ xác thực OTP hoặc faceID -->
+                            </div>
+                            <div class="tab-pane fade" id="account-info">
+                                <div class="card-body pb-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Bio</label>
+                                        <textarea class="form-control" rows="5">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat autem sapiente odit dolore itaque iure!</textarea
+                                        >
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Ngày Sinh</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value="Nov 17, 2004"
+                                        />
+                                        <!-- ! value: 
+                                         FIXME: value trả về ngày tháng-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                            >Quê Quán</label
+                                        >
+                                        <select class="custom-select">
+                                            <option>USA</option>
+                                            <option selected>Việt Nam</option>
+                                            <option>UK</option>
+                                            <option>Germany</option>
+                                            <option>France</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr class="border-light m-0" />
+                                <div class="card-body pb-2">
+                                    <h6 class="mb-4">Liên Hệ</h6>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value="0123456789"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value="thanhtinh.yarushi@gmail.com"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TODO: FACEID chưa xong -->
+                            <div
+                                class="tab-pane fade"
+                                id="faceid-authentication"
+                            >
+                                <h3>XÁC THỰC FACEID chưa có ý tưởng</h3>
+                            </div>
+
+                            <!-- TODO: XEM lịch trình thi chưa có ý tưởng -->
+                            <div class="tab-pane fade" id="see-exam-schedule">
+                                <h3>Xem lịch thi chưa có ý tưởng</h3>
+                            </div>
+
+                            <!-- TODO: Huỷ thi chưa có ý tưởng -->
+                            <div class="tab-pane fade" id="cancel-exam">
+                                <h3>Huỷ lịch thi chưa có ý tưởng</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right mt-3">
+                <button type="button" class="btn btn-primary">Lưu</button>&nbsp;
+                <button type="button" class="btn btn-default">Huỷ</button>
+            </div>
+        </div>
+        <script
+            data-cfasync="false"
+            src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+        ></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript"></script>
+    </body>
+</html>
